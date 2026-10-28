@@ -1,0 +1,31 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# C++ build artifacts
+build/
+cmake-build-*/
+*.o
+*.so
+
+# EDA temporary files
+*.log
+*.ddc
+*.db
+*.vcd
+*.fsdb
+
+# Generated research outputs
+outputs/
+
+# Proprietary SAED14 technology libraries
+inputs/liberty/
+*.lib
+*.db
+
+# Python and C++ build files
+.venv/
+__pycache__/
+build/
+*.o

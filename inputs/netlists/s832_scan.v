@@ -1,0 +1,207 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Ultra(TM) in wire load mode
+// Version   : U-2022.12-SP6
+// Date      : Tue Oct  6 13:57:09 2026
+/////////////////////////////////////////////////////////////
+
+
+module s832 ( CK, G0, G1, G10, G11, G12, G13, G14, G15, G16, G18, G2, G288, 
+        G290, G292, G296, G298, G3, G300, G302, G310, G312, G315, G322, G325, 
+        G327, G4, G43, G45, G47, G49, G5, G53, G55, G6, G7, G8, G9, scan_in, 
+        scan_out, scan_enable );
+  input CK, G0, G1, G10, G11, G12, G13, G14, G15, G16, G18, G2, G3, G4, G5, G6,
+         G7, G8, G9, scan_in, scan_enable;
+  output G288, G290, G292, G296, G298, G300, G302, G310, G312, G315, G322,
+         G325, G327, G43, G45, G47, G49, G53, G55, scan_out;
+  wire   G325, G38, G90, G39, G93, G40, G96, G41, G99, G102, n138, n139, n140,
+         n141, n142, n143, n144, n145, n146, n147, n148, n149, n150, n151,
+         n152, n153, n154, n155, n156, n157, n158, n159, n160, n161, n162,
+         n163, n164, n165, n166, n167, n168, n169, n170, n171, n172, n173,
+         n174, n175, n176, n177, n178, n179, n180, n181, n182, n183, n184,
+         n185, n186, n187, n188, n189, n190, n191, n192, n193, n194, n195,
+         n196, n197, n198, n199, n200, n201, n202, n203, n204, n205, n206,
+         n207, n208, n209, n210, n211, n212, n213, n214, n215, n216, n217,
+         n218, n219, n220, n221, n222, n223, n224, n225, n226, n227, n228,
+         n229, n230, n231, n232, n233, n234, n235, n236, n237, n238, n239,
+         n240, n241, n242, n243, n244, n245, n246, n247, n248, n249, n250,
+         n251, n252, n253, n254, n255, n256, n257, n258, n260, n261, n262,
+         n263, n264;
+  assign G310 = G325;
+
+  SAEDRVT14_FSDP_V2LP_1 DFF_0_Q_reg ( .D(G90), .SI(scan_in), .SE(scan_enable), 
+        .CK(CK), .Q(G38), .QN(n260) );
+  SAEDRVT14_FSDP_V2LP_1 DFF_1_Q_reg ( .D(G93), .SI(G38), .SE(scan_enable), 
+        .CK(CK), .Q(G39), .QN(n262) );
+  SAEDRVT14_FSDP_V2LP_1 DFF_2_Q_reg ( .D(G96), .SI(G39), .SE(scan_enable), 
+        .CK(CK), .Q(G40), .QN(n261) );
+  SAEDRVT14_FSDP_V2LP_1 DFF_4_Q_reg ( .D(G102), .SI(G41), .SE(scan_enable), 
+        .CK(CK), .Q(scan_out), .QN(n263) );
+  SAEDRVT14_FSDP_V2LP_1 DFF_3_Q_reg ( .D(G99), .SI(n261), .SE(scan_enable), 
+        .CK(CK), .Q(G41), .QN(n264) );
+  SAEDRVT14_ND2_CDC_0P5 U158 ( .A1(n153), .A2(n260), .X(n231) );
+  SAEDRVT14_ND2_CDC_0P5 U159 ( .A1(G39), .A2(n244), .X(n155) );
+  SAEDRVT14_ND2_CDC_0P5 U160 ( .A1(n264), .A2(n263), .X(n230) );
+  SAEDRVT14_ND2_CDC_0P5 U161 ( .A1(n260), .A2(G40), .X(n226) );
+  SAEDRVT14_ND2_CDC_0P5 U163 ( .A1(G40), .A2(G39), .X(n194) );
+  SAEDRVT14_OAI21_0P5 U164 ( .A1(G40), .A2(n260), .B(n245), .X(n168) );
+  SAEDRVT14_ND2_CDC_0P5 U165 ( .A1(G15), .A2(n178), .X(n167) );
+  SAEDRVT14_ND2_CDC_0P5 U166 ( .A1(n261), .A2(G39), .X(n227) );
+  SAEDRVT14_OAI21_0P5 U167 ( .A1(n260), .A2(n167), .B(G16), .X(n221) );
+  SAEDRVT14_ND2_CDC_0P5 U168 ( .A1(n187), .A2(n173), .X(n157) );
+  SAEDRVT14_NR2_1 U169 ( .A1(n248), .A2(n257), .X(G312) );
+  SAEDRVT14_ND2_CDC_0P5 U170 ( .A1(G4), .A2(G49), .X(n237) );
+  SAEDRVT14_ND2_CDC_0P5 U171 ( .A1(n159), .A2(G325), .X(n187) );
+  SAEDRVT14_NR2_1 U172 ( .A1(G41), .A2(n231), .X(G325) );
+  SAEDRVT14_OR3_0P5 U173 ( .A1(n236), .A2(n232), .A3(n169), .X(G49) );
+  SAEDRVT14_AN2_MM_0P5 U174 ( .A1(G14), .A2(G43), .X(G298) );
+  SAEDRVT14_NR2_1 U175 ( .A1(n154), .A2(n155), .X(G296) );
+  SAEDRVT14_NR2_1 U176 ( .A1(n196), .A2(n158), .X(n258) );
+  SAEDRVT14_NR2_1 U177 ( .A1(n260), .A2(n225), .X(n169) );
+  SAEDRVT14_NR2_1 U178 ( .A1(n228), .A2(n227), .X(G327) );
+  SAEDRVT14_ND2_CDC_0P5 U179 ( .A1(n236), .A2(n203), .X(n214) );
+  SAEDRVT14_ND2_CDC_0P5 U180 ( .A1(n246), .A2(n262), .X(n240) );
+  SAEDRVT14_AOI21_0P75 U181 ( .A1(n226), .A2(n168), .B(G39), .X(n232) );
+  SAEDRVT14_AOI21_0P75 U183 ( .A1(G16), .A2(n193), .B(n204), .X(n219) );
+  SAEDRVT14_AN2_MM_0P5 U184 ( .A1(G15), .A2(G53), .X(G43) );
+  SAEDRVT14_ND2_CDC_0P5 U185 ( .A1(G15), .A2(n236), .X(n229) );
+  SAEDRVT14_NR2_1 U186 ( .A1(n226), .A2(n225), .X(G288) );
+  SAEDRVT14_ND2_CDC_0P5 U188 ( .A1(G1), .A2(n201), .X(n143) );
+  SAEDRVT14_AOI21_0P75 U189 ( .A1(G15), .A2(n230), .B(n248), .X(n215) );
+  SAEDRVT14_ND2_CDC_0P5 U190 ( .A1(G15), .A2(n201), .X(n228) );
+  SAEDRVT14_OAI21_0P5 U191 ( .A1(G38), .A2(G39), .B(n227), .X(n172) );
+  SAEDRVT14_NR2_1 U192 ( .A1(n263), .A2(n194), .X(n153) );
+  SAEDRVT14_ND2_CDC_0P5 U193 ( .A1(n262), .A2(n162), .X(n192) );
+  SAEDRVT14_ND2_CDC_0P5 U194 ( .A1(G16), .A2(n170), .X(n150) );
+  SAEDRVT14_AOI21_0P75 U195 ( .A1(n263), .A2(n183), .B(G16), .X(n140) );
+  SAEDRVT14_AN4_0P5 U196 ( .A1(n170), .A2(n260), .A3(n261), .A4(n262), .X(G53)
+         );
+  SAEDRVT14_NR2_1 U197 ( .A1(n239), .A2(G40), .X(n171) );
+  SAEDRVT14_NR2_1 U198 ( .A1(G16), .A2(n245), .X(n235) );
+  SAEDRVT14_NR2_1 U199 ( .A1(G16), .A2(n208), .X(n242) );
+  SAEDRVT14_ND2_CDC_0P5 U200 ( .A1(n260), .A2(n263), .X(n158) );
+  SAEDRVT14_ND2_CDC_0P5 U201 ( .A1(n262), .A2(n264), .X(n239) );
+  SAEDRVT14_AOI21_0P75 U202 ( .A1(n261), .A2(n262), .B(n264), .X(n179) );
+  SAEDRVT14_ND2_CDC_0P5 U203 ( .A1(G16), .A2(scan_out), .X(n212) );
+  SAEDRVT14_NR2_1 U204 ( .A1(n261), .A2(G4), .X(n162) );
+  SAEDRVT14_NR2_1 U205 ( .A1(G41), .A2(n263), .X(n201) );
+  SAEDRVT14_ND2_CDC_0P5 U206 ( .A1(n260), .A2(G15), .X(n177) );
+  SAEDRVT14_AOI21_0P75 U207 ( .A1(G5), .A2(n263), .B(G41), .X(n195) );
+  SAEDRVT14_NR2_1 U208 ( .A1(n264), .A2(scan_out), .X(n170) );
+  SAEDRVT14_OAI21_0P5 U209 ( .A1(n248), .A2(n263), .B(n261), .X(n199) );
+  SAEDRVT14_OAI21_0P5 U210 ( .A1(G40), .A2(n178), .B(G38), .X(n180) );
+  SAEDRVT14_ND2_CDC_0P5 U211 ( .A1(n261), .A2(n262), .X(n138) );
+  SAEDRVT14_ND2_CDC_0P5 U212 ( .A1(n260), .A2(n233), .X(n183) );
+  SAEDRVT14_NR2_1 U213 ( .A1(n264), .A2(n263), .X(n245) );
+  SAEDRVT14_NR2_1 U214 ( .A1(G0), .A2(n260), .X(n142) );
+  SAEDRVT14_AN4_0P5 U215 ( .A1(G9), .A2(G6), .A3(G7), .A4(G8), .X(n178) );
+  SAEDRVT14_INV_0P5 U216 ( .A(G16), .X(n248) );
+  SAEDRVT14_NR2_1 U217 ( .A1(G10), .A2(G11), .X(n243) );
+  SAEDRVT14_NR2_1 U218 ( .A1(G1), .A2(G3), .X(n159) );
+  SAEDRVT14_INV_0P5 U219 ( .A(n239), .X(n149) );
+  SAEDRVT14_INV_0P5 U220 ( .A(n170), .X(n154) );
+  SAEDRVT14_INV_0P5 U221 ( .A(G4), .X(n203) );
+  SAEDRVT14_INV_0P5 U222 ( .A(n153), .X(n197) );
+  SAEDRVT14_AN4_0P5 U223 ( .A1(G38), .A2(n203), .A3(n197), .A4(n138), .X(n139)
+         );
+  SAEDRVT14_OAI21_0P5 U224 ( .A1(n261), .A2(n154), .B(n139), .X(n148) );
+  SAEDRVT14_AO21B_0P5 U225 ( .A1(n263), .A2(G0), .B(G38), .X(n141) );
+  SAEDRVT14_INV_0P5 U226 ( .A(G1), .X(n233) );
+  SAEDRVT14_AOI21_0P75 U227 ( .A1(n158), .A2(n141), .B(n140), .X(n146) );
+  SAEDRVT14_ND2_CDC_0P5 U228 ( .A1(n245), .A2(n142), .X(n144) );
+  SAEDRVT14_INV_0P5 U229 ( .A(n226), .X(n244) );
+  SAEDRVT14_OAI22_0P5 U230 ( .A1(n194), .A2(n144), .B1(n155), .B2(n143), .X(
+        n145) );
+  SAEDRVT14_AOI21_0P75 U231 ( .A1(n171), .A2(n146), .B(n145), .X(n147) );
+  SAEDRVT14_OA31_1 U232 ( .A1(n149), .A2(n248), .A3(n148), .B(n147), .X(n152)
+         );
+  SAEDRVT14_AOI21_0P75 U233 ( .A1(G10), .A2(G12), .B(G11), .X(n151) );
+  SAEDRVT14_INV_0P5 U234 ( .A(n177), .X(n246) );
+  SAEDRVT14_INV_0P5 U235 ( .A(n162), .X(n202) );
+  SAEDRVT14_OR4_1 U236 ( .A1(n151), .A2(n240), .A3(n202), .A4(n150), .X(n256)
+         );
+  SAEDRVT14_AOI21_0P75 U237 ( .A1(n152), .A2(n256), .B(G18), .X(G90) );
+  SAEDRVT14_OR4_1 U238 ( .A1(G0), .A2(n264), .A3(n260), .A4(n197), .X(n213) );
+  SAEDRVT14_OAI31_0P5 U239 ( .A1(scan_out), .A2(G5), .A3(n155), .B(n213), .X(
+        n156) );
+  SAEDRVT14_NR2_1 U240 ( .A1(G296), .A2(n156), .X(n173) );
+  SAEDRVT14_AOI21_0P75 U241 ( .A1(n162), .A2(n169), .B(n157), .X(n255) );
+  SAEDRVT14_INV_0P5 U242 ( .A(n171), .X(n196) );
+  SAEDRVT14_ND2_CDC_0P5 U243 ( .A1(G2), .A2(n159), .X(n208) );
+  SAEDRVT14_INV_0P5 U244 ( .A(n227), .X(n236) );
+  SAEDRVT14_INV_0P5 U245 ( .A(G15), .X(n198) );
+  SAEDRVT14_AOI21_0P75 U246 ( .A1(G10), .A2(G11), .B(G12), .X(n160) );
+  SAEDRVT14_OAI21_0P5 U247 ( .A1(G10), .A2(G11), .B(n160), .X(n161) );
+  SAEDRVT14_AOI21_0P75 U248 ( .A1(n260), .A2(n161), .B(scan_out), .X(n163) );
+  SAEDRVT14_OR4_1 U249 ( .A1(n163), .A2(n264), .A3(n248), .A4(n192), .X(n164)
+         );
+  SAEDRVT14_OAI22_0P5 U250 ( .A1(n235), .A2(n214), .B1(n198), .B2(n164), .X(
+        n165) );
+  SAEDRVT14_AOI21_0P75 U251 ( .A1(n258), .A2(n242), .B(n165), .X(n166) );
+  SAEDRVT14_AOI21_0P75 U252 ( .A1(n255), .A2(n166), .B(G18), .X(G93) );
+  SAEDRVT14_AOI21_0P75 U253 ( .A1(G4), .A2(G49), .B(G298), .X(n191) );
+  SAEDRVT14_AOI21_0P75 U254 ( .A1(n198), .A2(n172), .B(n171), .X(n174) );
+  SAEDRVT14_OAI21_0P5 U255 ( .A1(n174), .A2(n212), .B(n173), .X(n189) );
+  SAEDRVT14_ND2_CDC_0P5 U256 ( .A1(G9), .A2(G6), .X(n176) );
+  SAEDRVT14_OR4_1 U257 ( .A1(G8), .A2(G7), .A3(n261), .A4(n240), .X(n175) );
+  SAEDRVT14_OAI22_0P5 U258 ( .A1(n198), .A2(n227), .B1(n176), .B2(n175), .X(
+        n185) );
+  SAEDRVT14_AN2_MM_0P5 U259 ( .A1(G15), .A2(G13), .X(n193) );
+  SAEDRVT14_AO32_U_0P5 U260 ( .A1(n193), .A2(scan_out), .A3(n262), .B1(n263), 
+        .B2(n177), .X(n182) );
+  SAEDRVT14_OAI21_0P5 U261 ( .A1(n180), .A2(n262), .B(n179), .X(n181) );
+  SAEDRVT14_OAI22_0P5 U262 ( .A1(n196), .A2(n183), .B1(n182), .B2(n181), .X(
+        n184) );
+  SAEDRVT14_AOI21_0P75 U263 ( .A1(n263), .A2(n185), .B(n184), .X(n186) );
+  SAEDRVT14_OAI22_0P5 U264 ( .A1(G2), .A2(n187), .B1(n186), .B2(n248), .X(n188) );
+  SAEDRVT14_NR2_1 U265 ( .A1(n189), .A2(n188), .X(n190) );
+  SAEDRVT14_AOI21_0P75 U266 ( .A1(n191), .A2(n190), .B(G18), .X(G102) );
+  SAEDRVT14_INV_0P5 U267 ( .A(n192), .X(n220) );
+  SAEDRVT14_INV_0P5 U268 ( .A(n245), .X(n204) );
+  SAEDRVT14_OAI22_0P5 U269 ( .A1(n195), .A2(n194), .B1(n264), .B2(n202), .X(
+        n211) );
+  SAEDRVT14_OA22_U_0P5 U270 ( .A1(G41), .A2(n197), .B1(G16), .B2(n196), .X(
+        n209) );
+  SAEDRVT14_OAI21_0P5 U271 ( .A1(G14), .A2(n198), .B(G41), .X(n200) );
+  SAEDRVT14_AOI21_0P75 U272 ( .A1(n200), .A2(n263), .B(n199), .X(n206) );
+  SAEDRVT14_AOI21_0P75 U273 ( .A1(G16), .A2(n228), .B(n202), .X(n205) );
+  SAEDRVT14_OAI22_0P5 U274 ( .A1(n206), .A2(n205), .B1(n204), .B2(n203), .X(
+        n207) );
+  SAEDRVT14_OAI22_0P5 U275 ( .A1(n209), .A2(n208), .B1(G39), .B2(n207), .X(
+        n210) );
+  SAEDRVT14_AOI21_0P75 U276 ( .A1(n212), .A2(n211), .B(n210), .X(n217) );
+  SAEDRVT14_OA31_1 U277 ( .A1(n245), .A2(n215), .A3(n214), .B(n213), .X(n216)
+         );
+  SAEDRVT14_OAI21_0P5 U278 ( .A1(G38), .A2(n217), .B(n216), .X(n218) );
+  SAEDRVT14_AOI21_0P75 U279 ( .A1(n220), .A2(n219), .B(n218), .X(n224) );
+  SAEDRVT14_OA31_1 U280 ( .A1(G38), .A2(G40), .A3(G15), .B(n227), .X(n222) );
+  SAEDRVT14_OR4_1 U281 ( .A1(G4), .A2(n222), .A3(n264), .A4(n221), .X(n223) );
+  SAEDRVT14_AOI21_0P75 U282 ( .A1(n224), .A2(n223), .B(G18), .X(G99) );
+  SAEDRVT14_OA21_1 U283 ( .A1(G325), .A2(n258), .B(G1), .X(G322) );
+  SAEDRVT14_NR2_1 U284 ( .A1(n230), .A2(n229), .X(G290) );
+  SAEDRVT14_OR2_MM_0P5 U285 ( .A1(n231), .A2(n264), .X(n257) );
+  SAEDRVT14_AN4_0P5 U286 ( .A1(G3), .A2(n258), .A3(n248), .A4(n233), .X(G300)
+         );
+  SAEDRVT14_AO32_U_0P5 U287 ( .A1(n258), .A2(G16), .A3(n233), .B1(n248), .B2(
+        n232), .X(n234) );
+  SAEDRVT14_AOI21_0P75 U288 ( .A1(n236), .A2(n235), .B(n234), .X(n238) );
+  SAEDRVT14_ND2_CDC_0P5 U289 ( .A1(n238), .A2(n237), .X(G302) );
+  SAEDRVT14_AN2_MM_0P5 U291 ( .A1(G5), .A2(G288), .X(G55) );
+  SAEDRVT14_OAI22_0P5 U292 ( .A1(G14), .A2(n240), .B1(G38), .B2(n239), .X(n241) );
+  SAEDRVT14_OAI21_0P5 U293 ( .A1(G41), .A2(n242), .B(n241), .X(n253) );
+  SAEDRVT14_AO32_U_0P5 U294 ( .A1(G15), .A2(G41), .A3(n243), .B1(G15), .B2(
+        n245), .X(n250) );
+  SAEDRVT14_OAI22_0P5 U295 ( .A1(G40), .A2(n246), .B1(n245), .B2(n244), .X(
+        n247) );
+  SAEDRVT14_OR4_1 U296 ( .A1(G4), .A2(G39), .A3(n248), .A4(n247), .X(n249) );
+  SAEDRVT14_AOI21_0P75 U297 ( .A1(n250), .A2(G40), .B(n249), .X(n251) );
+  SAEDRVT14_NR2_1 U298 ( .A1(G292), .A2(n251), .X(n252) );
+  SAEDRVT14_OA31_1 U299 ( .A1(G40), .A2(scan_out), .A3(n253), .B(n252), .X(
+        n254) );
+  SAEDRVT14_AOI21_0P75 U300 ( .A1(n255), .A2(n254), .B(G18), .X(G96) );
+  SAEDRVT14_OA21B_1 U301 ( .A1(G12), .A2(G10), .B(n256), .X(G45) );
+  SAEDRVT14_ND2B_U_0P5 U302 ( .A(n258), .B(n257), .X(G315) );
+  SAEDRVT14_OR2_0P5 U162 ( .A1(n230), .A2(n262), .X(n225) );
+  SAEDRVT14_NR2B_U_0P5 U182 ( .A(G288), .B(G5), .X(G47) );
+  SAEDRVT14_AN4_0P5 U187 ( .A1(n245), .A2(n236), .A3(n203), .A4(n221), .X(G292) );
+endmodule
+
